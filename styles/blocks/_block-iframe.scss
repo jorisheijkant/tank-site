@@ -1,0 +1,29 @@
+.block-iframe {
+  .iframe-wrapper {
+    @include wh(100%, auto);
+    @include flex-center();
+
+    iframe {
+      @include wh(100%, auto);
+    }
+  }
+
+  .iframe-wrapper.type-youtube {
+    @include wh(100%, 0px);
+    padding-bottom: 56.25%;
+    position: relative;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include wh(100%);
+    }
+  }
+
+  .iframe-wrapper.type-spotify {
+    iframe {
+      min-height: 400px;
+    }
+  }
+}

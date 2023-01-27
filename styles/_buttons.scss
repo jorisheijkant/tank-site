@@ -1,0 +1,26 @@
+button:focus {
+  outline: none;
+}
+
+.tank-button {
+  height: 40px;
+  @include flex-center();
+  background: transparent;
+  border: 1px solid $black;
+  padding: 0 10px;
+  @include typogram($body);
+  color: $black;
+  cursor: pointer;
+
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  @include respond-until($screen-sm) {
+    height: 30px;
+  }
+}
+
+.tank-button:hover {
+  background: $black;
+  border: 1px solid $white;
+  color: $white;
+}

@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "format": "yarn prettier --write \"**/*.{js,ts,vue,scss}\"",
+    "lint": "yarn eslint --ext .js,.ts,.vue ."
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "nuxt": "^3.1.0",
+    "prettier": "^2.8.3",
+    "sass": "^1.57.1"
+  }
+}

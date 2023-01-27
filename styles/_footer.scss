@@ -1,0 +1,32 @@
+.footer {
+  @include wh(100%, auto);
+  min-height: 50px;
+  @include flex-center();
+
+  .footer-wrapper {
+    @include wh(100%, auto);
+    max-width: 1140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  a {
+    font-size: 1.3rem;
+    text-decoration: underline;
+  }
+
+  background: $black;
+  margin-top: $spacing;
+  padding:#{0.5 * $spacing} $spacing;
+  color: $light-grey;
+
+  @include respond-until($screen-xs) {
+    padding: #{0.5 * $spacing}
+  }
+}

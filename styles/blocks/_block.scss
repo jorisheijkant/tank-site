@@ -1,0 +1,5 @@
+.block {
+  @include wh(100%, auto);
+  @include flex-center();
+  margin: $spacing 0;
+}

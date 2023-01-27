@@ -1,0 +1,47 @@
+.navbar-wrapper {
+  @include wh(100%, 50px);
+  @include flex-center();
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $white;
+  z-index: 3;
+
+  overflow: hidden;
+}
+
+.navbar {
+  @include wh(90%, 50px);
+  max-width: 1000px;
+  border-bottom: 1px solid $light-grey;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-left {
+    @include wh(50px);
+    @include flex-center();
+
+    .nav-logo {
+      @include wh(30px);
+    }
+  }
+
+  .nav-middle {
+    .nav-heading {
+      font-family: $walsheim-light;
+      font-size: 1.7rem;
+
+      .boldspan {
+        font-family: $walsheim-bold;
+      }
+    }
+  }
+
+  .nav-right .listen-link {
+    font-family: $walsheim-light;
+    text-decoration: underline;
+  }
+}

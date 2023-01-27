@@ -1,0 +1,5 @@
+.main {
+  @include wh(100%, auto);
+  @include flex-center();
+  margin-top: 50px;
+}

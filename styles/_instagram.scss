@@ -1,0 +1,51 @@
+.instagram {
+
+  .content {
+    @include wh(100%, auto);
+    @include flex-center();
+    padding: $spacing 0;
+  }
+
+  .insta-header {
+    padding: 0 $spacing;
+    margin-bottom: $spacing;
+  }
+
+  .lead {
+    padding: 0 $spacing;
+    text-align: center;
+  }
+
+  .insta-grid {
+    @include wh(100%, auto);
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $spacing;
+    padding: $spacing;
+
+    @include respond-until($screen-xs) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .insta-teaser {
+      @include wh(100%, 0px);
+      padding-bottom: 100%;
+      position: relative;
+
+      transition: transform 0.3s ease;
+
+      .teaser-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include wh(100%);
+        object-fit: cover;
+      }
+    }
+
+    .insta-teaser:hover {
+      transform: translateY(-10px);
+    }
+  }
+}

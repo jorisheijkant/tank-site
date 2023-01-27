@@ -1,0 +1,87 @@
+// generic teaser styling
+
+.teaser {
+  @include wh(100%, auto);
+  //max-width: 400px;
+  @include flex-center();
+  //padding: #{0.5 * $spacing};
+  cursor: pointer;
+
+  .teaser-wrapper {
+    @include wh(100%, auto);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+
+  .teaser-wrapper:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+  .teaser-wrapper .teaser-content {
+    @include wh(100%, auto);
+    padding: #{0.5 * $spacing};
+  }
+
+  .teaser-content .teaser-heading {
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin-bottom: #{0.125 * $spacing};
+  }
+
+  .teaser-content .teaser-text {
+    margin-bottom: #{0.25 * $spacing};
+  }
+}
+
+//Specific small teaser styling
+
+.small-teaser {
+  .teaser-wrapper {
+    @include wh(100%, auto);
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    max-height: 100px;
+  }
+
+  .teaser-wrapper .teaser-image {
+    @include wh(100px);
+    min-width: 100px;
+  }
+
+  .teaser-wrapper .teaser-content .teaser-heading {
+    font-size: 1.6rem;
+  }
+
+  .teaser-wrapper .teaser-content .link {
+    text-decoration: underline;
+    font-size: 1.5rem;
+  }
+}
+
+.big-teaser {
+  justify-content: flex-start;
+
+  .teaser-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .teaser-wrapper .teaser-image {
+    @include wh(100%, auto);
+  }
+
+  .teaser-content .teaser-heading {
+    @include wh(100%, auto);
+  }
+
+  .teaser-content .teaser-text {
+    @include wh(100%, auto);
+    margin-bottom: #{0.5 * $spacing};
+    word-break: break-word;
+  }
+}

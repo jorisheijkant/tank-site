@@ -1,0 +1,7 @@
+.block-text {
+  padding: 0 #{0.5 * $spacing};
+
+  .paragraph {
+    margin-bottom: #{0.5 * $spacing};
+  }
+}

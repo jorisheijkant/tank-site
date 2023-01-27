@@ -1,0 +1,18 @@
+.blogs {
+  @include wh(100%, auto);
+  .content {
+    @include wh(100%, auto);
+    @include flex-center();
+
+    padding: #{1 * $spacing};
+
+    @include respond-until($screen-xs) {
+      padding: #{0.5 * $spacing};
+    }
+
+    h2 {
+      //@include wh(100%, auto);
+      margin-top: $spacing;
+    }
+  }
+}

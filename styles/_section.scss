@@ -1,0 +1,20 @@
+.section {
+  @include wh(100%, auto);
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: #{1 * $spacing};
+
+  @include respond-until($screen-sm) {
+    padding: #{0.5 * $spacing};
+  }
+
+  .section-close {
+    @include wh(100%, 1px);
+    border: none;
+    background: $light-grey;
+    margin-top: $spacing;
+  }
+}

@@ -1,0 +1,51 @@
+.rotating-jumbo {
+  @include wh(100%, auto);
+  max-width: 1000px;
+  @include flex-center();
+  padding: #{0.5 * $spacing};
+  border-bottom: 1px solid $light-grey;
+
+  .image-container {
+    @include wh(100%, 0);
+    padding-bottom: 56.25%;
+    background: $light-grey;
+    position: relative;
+
+    .image {
+      @include wh(100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image.visible {
+      opacity: 1;
+    }
+  }
+
+  .jumbo-text {
+    @include wh(100%, auto);
+    max-width: 600px;
+    padding: #{0.5 * $spacing} 0 0;
+    font-family: $walsheim-light;
+    font-size: 1.85rem;
+    line-height: 1.5;
+
+    a {
+      text-decoration: underline;
+      font-family: $walsheim-light;
+      font-size: 1.85rem;
+      padding: 0 5px;
+      background: rgba($light-grey, 0.5);
+      transition: background 0.5s ease;
+    }
+
+    .span-active {
+      background: rgba($highlight-1, 0.5);
+    }
+  }
+}

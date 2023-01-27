@@ -1,0 +1,21 @@
+.teaser-grid {
+  @include wh(100%, auto);
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: #{2 * $spacing} #{1.5 * $spacing};
+  justify-items: center;
+  align-content: center;
+  margin: #{1.5 * $spacing} 0;
+
+  @include respond-until($screen-sm) {
+    grid-template-columns: 1fr;
+    grid-gap: #{0.5 * $spacing};
+  }
+
+  @include respond-between($screen-sm, $screen-lg) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: #{1 * $spacing};
+    margin: #{1 * $spacing} 0;
+  }
+}

@@ -1,0 +1,19 @@
+// @import "~/assets/fonts/gt-walsheim-light-export/gt-walsheim-light.css";
+// @import "~/assets/fonts/gt-walsheim-ultra-bold-export/gt-walsheim-ultra-bold.css";
+//@import "~/assets/fonts/gt-walsheim-regular-export/gt-walsheim-regular.css";
+
+
+@font-face {
+    font-family:"GTWalsheimProLight";
+    src:url("~/assets/fonts/gt-walsheim-light.woff2") format("woff2"),url("~/assets/fonts/gt-walsheim-light.woff") format("woff");
+    font-style:normal;font-weight:400;
+}
+
+@font-face {
+    font-family:"GTWalsheimProUltraBold";
+    src:url("~/assets/fonts/gt-walsheim-ultra-bold.woff2") format("woff2"),url("~/assets/fonts/gt-walsheim-ultra-bold.woff") format("woff");
+    font-style:normal;font-weight:400;
+}
+
+$walsheim-bold: 'GTWalsheimProUltraBold', 'Helvetica Neue', sans-serif;
+$walsheim-light: 'GTWalsheimProLight', 'Helvetica Neue', sans-serif;

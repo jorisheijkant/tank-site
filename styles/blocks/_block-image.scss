@@ -1,0 +1,16 @@
+.block-image {
+  @include wh(100%, auto);
+  @include flex-center();
+
+  .image {
+    @include wh(100%, auto);
+  }
+
+  .image-small {
+    max-width: 300px;
+  }
+
+  .image-medium {
+    max-width: 500px;
+  }
+}

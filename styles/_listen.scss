@@ -17,7 +17,7 @@
 
     .listen-link {
       font-size: 2rem;
-      margin: #{0.25 *$spacing} 0 #{0.5 * $spacing};
+      margin: #{0.25 * $spacing} 0 #{0.5 * $spacing};
       font-family: $walsheim-light;
       text-align: center;
     }
@@ -27,6 +27,5 @@
       padding: 2px 10px;
       text-decoration: underline;
     }
-
   }
 }

@@ -14,7 +14,7 @@
 //     decimal-round(0.666, 1) => 0.7
 //     decimal-round(0.666, 2) => 0.67
 //
-@function decimal-round ($number, $digits: 0, $mode: round) {
+@function decimal-round($number, $digits: 0, $mode: round) {
   $n: 1;
   // $number must be a number
   @if type-of($number) != number {
@@ -57,7 +57,7 @@
 //     decimal-ceil(0.666, 1) => 0.7
 //     decimal-ceil(0.666, 2) => 0.67
 //
-@function decimal-ceil ($number, $digits: 0) {
+@function decimal-ceil($number, $digits: 0) {
   @return decimal-round($number, $digits, ceil);
 }
 
@@ -74,38 +74,38 @@
 //     decimal-floor(0.666, 1) => 0.6
 //     decimal-floor(0.666, 2) => 0.66
 //
-@function decimal-floor ($number, $digits: 0) {
+@function decimal-floor($number, $digits: 0) {
   @return decimal-round($number, $digits, floor);
 }
 
 // calculate font size in ems based on font size in px and base size in px
-@function get-rems($font-size,$base-size: $base-size){
-  @return decimal-floor(calc($font-size/$base-size),2)+rem
+@function get-rems($font-size, $base-size: $base-size) {
+  @return decimal-floor(calc($font-size/$base-size), 2) + rem;
 }
 
 // calculate line-height based on font size and line height in px
-@function get-lh($font-size,$line-height){
-  @return decimal-floor(calc($line-height/$font-size),2)+em
+@function get-lh($font-size, $line-height) {
+  @return decimal-floor(calc($line-height/$font-size), 2) + em;
 }
-@function line-height($font-size,$line-height){
-  @return decimal-floor(calc($line-height/$font-size),2)+em
+@function line-height($font-size, $line-height) {
+  @return decimal-floor(calc($line-height/$font-size), 2) + em;
 }
 
 // includes font-family and responsive font-size
 @mixin typogram($typogram, $fs-breakpoints: $breakpoints) {
   // need to dynamically include font-family based on var
-  @if map-has-key($typogram, 'style') {
-    font-family: map-get($typogram, 'style');
+  @if map-has-key($typogram, "style") {
+    font-family: map-get($typogram, "style");
   }
-  @if map-has-key($typogram, 'letter-spacing') {
-    letter-spacing: map-get($typogram, 'letter-spacing');
+  @if map-has-key($typogram, "letter-spacing") {
+    letter-spacing: map-get($typogram, "letter-spacing");
   }
-  @if map-has-key($typogram, 'text-transform') {
-    text-transform: map-get($typogram, 'text-transform');
+  @if map-has-key($typogram, "text-transform") {
+    text-transform: map-get($typogram, "text-transform");
   }
-  @if map-has-key($typogram, 'sizes') {
+  @if map-has-key($typogram, "sizes") {
     // include responsive font sizes
-    @include font-size(map-get($typogram, 'sizes'));
+    @include font-size(map-get($typogram, "sizes"));
   }
 }
 
@@ -113,8 +113,7 @@
   @each $fs-breakpoint, $fs-font-size in $fs-map {
     @if $fs-breakpoint == null {
       @include make-font-size($fs-font-size);
-    }
-    @else {
+    } @else {
       // If $fs-font-size is a key that exists in
       // $fs-breakpoints, use the value
       @if map-has-key($fs-breakpoints, $fs-breakpoint) {
@@ -136,8 +135,7 @@
     @if (length($fs-font-size) > 1) {
       line-height: nth($fs-font-size, 2);
     }
-  }
-  @else {
+  } @else {
     font-size: $fs-font-size;
   }
 }

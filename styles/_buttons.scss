@@ -12,7 +12,7 @@ button:focus {
   color: $black;
   cursor: pointer;
 
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   @include respond-until($screen-sm) {
     height: 30px;

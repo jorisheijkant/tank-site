@@ -23,10 +23,10 @@
 
   background: $black;
   margin-top: $spacing;
-  padding:#{0.5 * $spacing} $spacing;
+  padding: #{0.5 * $spacing} $spacing;
   color: $light-grey;
 
   @include respond-until($screen-xs) {
-    padding: #{0.5 * $spacing}
+    padding: #{0.5 * $spacing};
   }
 }

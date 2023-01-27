@@ -1,40 +1,43 @@
 // Do a reset
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 // Set REM here
 
 html {
-	font-size: 10px;
+  font-size: 10px;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-	overflow-x: hidden;
+  overflow-x: hidden;
 
-	/* Better Font Rendering =========== */
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-	color: inherit;
+  color: inherit;
 }
 
 // These elements don't inherit the font styles by default
-input, select, textarea, button {
-	font: inherit;
+input,
+select,
+textarea,
+button {
+  font: inherit;
 }
 
 img {
-	border: 0; // Be kind for IE9
+  border: 0; // Be kind for IE9
 }

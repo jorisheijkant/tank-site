@@ -6,9 +6,20 @@
 	@include typogram($b4);
 }*/
 
-
 // Set up a global typogram variable
-$typogram-names: (h1,h2,h3,h4,body,header,button,quote,caption,lead, dropcap);
+$typogram-names: (
+  h1,
+  h2,
+  h3,
+  h4,
+  body,
+  header,
+  button,
+  quote,
+  caption,
+  lead,
+  dropcap
+);
 
 // define base sizes, equals 1em.
 $base-size: 10;
@@ -18,9 +29,9 @@ $default-line-height: 1.2em;
 // define breakpoints used for responsive typography
 // TAKEN FROM VK BREAKPOINTS FILE
 $breakpoints: (
-        small : $screen-xs,
-        medium: $screen-sm,
-        large : $screen-md
+  small: $screen-xs,
+  medium: $screen-sm,
+  large: $screen-md,
 );
 
 //
@@ -28,157 +39,301 @@ $breakpoints: (
 //
 
 // h1
-$h1-font-family: 'GTWalsheimProUltraBold', 'Helvetica Neue', sans-serif;
+$h1-font-family: "GTWalsheimProUltraBold", "Helvetica Neue", sans-serif;
 $h1-font-sizes: (
-        null  : (get-rems(80), 1.1),
-        small : (get-rems(80), 1.1),
-        medium: (get-rems(100), 1.07),
-        large : (get-rems(120), 1.07),
+  null: (
+    get-rems(80),
+    1.1,
+  ),
+  small: (
+    get-rems(80),
+    1.1,
+  ),
+  medium: (
+    get-rems(100),
+    1.07,
+  ),
+  large: (
+    get-rems(120),
+    1.07,
+  ),
 );
 $h1: (
-        style : $h1-font-family,
-        sizes : $h1-font-sizes
+  style: $h1-font-family,
+  sizes: $h1-font-sizes,
 );
 
 // h2
-$h2-font-family: 'GTWalsheimProUltraBold', 'Helvetica Neue', sans-serif;
+$h2-font-family: "GTWalsheimProUltraBold", "Helvetica Neue", sans-serif;
 //$h2-leading: line-height(100,108);
 $h2-font-sizes: (
-        null  : (get-rems(30), 1.1),
-        small : (get-rems(30), 1.1),
-        medium: (get-rems(31), 1.07),
-        large : (get-rems(32), 1.07),
+  null: (
+    get-rems(30),
+    1.1,
+  ),
+  small: (
+    get-rems(30),
+    1.1,
+  ),
+  medium: (
+    get-rems(31),
+    1.07,
+  ),
+  large: (
+    get-rems(32),
+    1.07,
+  ),
 );
 $h2: (
-        style : $h2-font-family,
-        sizes : $h2-font-sizes
+  style: $h2-font-family,
+  sizes: $h2-font-sizes,
 );
 
 // h3
-$h3-font-family: 'GTWalsheimProLight', 'Helvetica Neue', sans-serif;
+$h3-font-family: "GTWalsheimProLight", "Helvetica Neue", sans-serif;
 $h3-font-sizes: (
-        null  : (get-rems(52), 1.1),
-        small : (get-rems(52), 1.1),
-        medium: (get-rems(54), 1.11),
-        large : (get-rems(56), 1.11),
+  null: (
+    get-rems(52),
+    1.1,
+  ),
+  small: (
+    get-rems(52),
+    1.1,
+  ),
+  medium: (
+    get-rems(54),
+    1.11,
+  ),
+  large: (
+    get-rems(56),
+    1.11,
+  ),
 );
 $h3: (
-        style : $h3-font-family,
-        sizes : $h3-font-sizes
+  style: $h3-font-family,
+  sizes: $h3-font-sizes,
 );
 
 // h4
-$h4-font-family: 'GTWalsheimProUltraBold', 'Helvetica Neue', sans-serif;
+$h4-font-family: "GTWalsheimProUltraBold", "Helvetica Neue", sans-serif;
 $h4-font-sizes: (
-        null  : (get-rems(40), 1.1),
-        small : (get-rems(40), 1.1),
-        medium: (get-rems(40), 1.1),
-        large : (get-rems(40), 1.1),
+  null: (
+    get-rems(40),
+    1.1,
+  ),
+  small: (
+    get-rems(40),
+    1.1,
+  ),
+  medium: (
+    get-rems(40),
+    1.1,
+  ),
+  large: (
+    get-rems(40),
+    1.1,
+  ),
 );
 $h4: (
-        style : $h4-font-family,
-        sizes : $h4-font-sizes
+  style: $h4-font-family,
+  sizes: $h4-font-sizes,
 );
 
 // h5
-$h5-font-family: 'GTWalsheimProLight', 'Helvetica Neue', sans-serif;
+$h5-font-family: "GTWalsheimProLight", "Helvetica Neue", sans-serif;
 $h5-font-sizes: (
-        null  : (get-rems(19), 1.21),
-        small : (get-rems(19), 1.21),
-        medium: (get-rems(20), 1.2),
-        large : (get-rems(20), 1.2),
+  null: (
+    get-rems(19),
+    1.21,
+  ),
+  small: (
+    get-rems(19),
+    1.21,
+  ),
+  medium: (
+    get-rems(20),
+    1.2,
+  ),
+  large: (
+    get-rems(20),
+    1.2,
+  ),
 );
 
 $h5: (
-        style : $h5-font-family,
-        sizes : $h5-font-sizes
+  style: $h5-font-family,
+  sizes: $h5-font-sizes,
 );
 
 // h6
-$h6-font-family: 'GTWalsheimProUltraBold', 'Helvetica Neue', sans-serif;
+$h6-font-family: "GTWalsheimProUltraBold", "Helvetica Neue", sans-serif;
 $h6-font-sizes: (
-        null  : (get-rems(19), 1.21),
-        small : (get-rems(19), 1.21),
-        medium: (get-rems(20), 1.2),
-        large : (get-rems(20), 1.2),
+  null: (
+    get-rems(19),
+    1.21,
+  ),
+  small: (
+    get-rems(19),
+    1.21,
+  ),
+  medium: (
+    get-rems(20),
+    1.2,
+  ),
+  large: (
+    get-rems(20),
+    1.2,
+  ),
 );
 $h6: (
-        style : $h6-font-family,
-        sizes : $h6-font-sizes
+  style: $h6-font-family,
+  sizes: $h6-font-sizes,
 );
 
 // Body
 $body-font-family: $walsheim-light;
 $body-font-sizes: (
-        null  : (get-rems(17), 1.37),
-        small : (get-rems(17), 1.37),
-        medium: (get-rems(19), 1.5),
-        large : (get-rems(19), 1.5),
+  null: (
+    get-rems(17),
+    1.37,
+  ),
+  small: (
+    get-rems(17),
+    1.37,
+  ),
+  medium: (
+    get-rems(19),
+    1.5,
+  ),
+  large: (
+    get-rems(19),
+    1.5,
+  ),
 );
 $body: (
-        style : $body-font-family,
-        sizes : $body-font-sizes
+  style: $body-font-family,
+  sizes: $body-font-sizes,
 );
 
-$caption-font-family: 'Open Sans', Helvetica, sans-serif;
+$caption-font-family: "Open Sans", Helvetica, sans-serif;
 $caption-font-sizes: (
-        null  : (get-rems(13), 1.08),
-        small : (get-rems(13), 1.08),
-        medium: (get-rems(13), 1.08),
-        large : (get-rems(13), 1.08),
+  null: (
+    get-rems(13),
+    1.08,
+  ),
+  small: (
+    get-rems(13),
+    1.08,
+  ),
+  medium: (
+    get-rems(13),
+    1.08,
+  ),
+  large: (
+    get-rems(13),
+    1.08,
+  ),
 );
 $caption: (
-        style : $caption-font-family,
-        sizes : $caption-font-sizes
+  style: $caption-font-family,
+  sizes: $caption-font-sizes,
 );
 
-$lead-font-family: 'Open Sans Bold', Helvetica, sans-serif;
+$lead-font-family: "Open Sans Bold", Helvetica, sans-serif;
 $lead-font-sizes: (
-        null  : (get-rems(22), 1.13),
-        small : (get-rems(22), 1.13),
-        medium: (get-rems(24), 1.14),
-        large : (get-rems(24), 1.14),
+  null: (
+    get-rems(22),
+    1.13,
+  ),
+  small: (
+    get-rems(22),
+    1.13,
+  ),
+  medium: (
+    get-rems(24),
+    1.14,
+  ),
+  large: (
+    get-rems(24),
+    1.14,
+  ),
 );
 $lead: (
-        style : $lead-font-family,
-        sizes : $lead-font-sizes
+  style: $lead-font-family,
+  sizes: $lead-font-sizes,
 );
 
 // Button
-$button-font-family: 'Open Sans', Helvetica, sans-serif;
+$button-font-family: "Open Sans", Helvetica, sans-serif;
 $button-font-sizes: (
-        null  : (get-rems(12), 1.2),
-        small : (get-rems(12), 1.2),
-        medium: (get-rems(13), 1.2),
-        large : (get-rems(13), 1.2),
+  null: (
+    get-rems(12),
+    1.2,
+  ),
+  small: (
+    get-rems(12),
+    1.2,
+  ),
+  medium: (
+    get-rems(13),
+    1.2,
+  ),
+  large: (
+    get-rems(13),
+    1.2,
+  ),
 );
 $buttontype: (
-        style : $button-font-family,
-        sizes : $button-font-sizes
+  style: $button-font-family,
+  sizes: $button-font-sizes,
 );
 
 // Blockquote
-$quote-font-family: 'Open Sans Bold', Helvetica, sans-serif;
+$quote-font-family: "Open Sans Bold", Helvetica, sans-serif;
 $quote-font-sizes: (
-        null  : (get-rems(20), 1.2),
-        small : (get-rems(20), 1.2),
-        medium: (get-rems(22), 1.21),
-        large : (get-rems(22), 1.21),
+  null: (
+    get-rems(20),
+    1.2,
+  ),
+  small: (
+    get-rems(20),
+    1.2,
+  ),
+  medium: (
+    get-rems(22),
+    1.21,
+  ),
+  large: (
+    get-rems(22),
+    1.21,
+  ),
 );
 $quote: (
-        style : $quote-font-family,
-        sizes : $quote-font-sizes
+  style: $quote-font-family,
+  sizes: $quote-font-sizes,
 );
 
 // dropcap
-$dropcap-font-family: 'Open Sans', Helvetica, sans-serif;
+$dropcap-font-family: "Open Sans", Helvetica, sans-serif;
 $dropcap-font-sizes: (
-        null  : (get-rems(92), 0.67),
-        small : (get-rems(92), 0.67),
-        medium: (get-rems(192), 0.7),
-        large : (get-rems(192), 0.7),
+  null: (
+    get-rems(92),
+    0.67,
+  ),
+  small: (
+    get-rems(92),
+    0.67,
+  ),
+  medium: (
+    get-rems(192),
+    0.7,
+  ),
+  large: (
+    get-rems(192),
+    0.7,
+  ),
 );
 $dropcap: (
-        style : $dropcap-font-family,
-        sizes : $dropcap-font-sizes
+  style: $dropcap-font-family,
+  sizes: $dropcap-font-sizes,
 );

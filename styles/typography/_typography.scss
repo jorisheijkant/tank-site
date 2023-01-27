@@ -5,8 +5,9 @@ $base-size: 10;
 $base-size-px: 10px;
 $default-line-height: 1.4em;
 
-html, body {
-  font-size: $base-size+px;
+html,
+body {
+  font-size: $base-size + px;
   color: $black;
 
   /* Better Font Rendering =========== */
@@ -18,7 +19,8 @@ input {
   @include typogram($body);
 }
 
-p, a {
+p,
+a {
   @include typogram($body);
 
   strong {
@@ -27,7 +29,8 @@ p, a {
   }
 }
 
-ul, ol {
+ul,
+ol {
   list-style-position: inside;
 
   li {
@@ -44,8 +47,8 @@ h1 {
 }
 
 h2 {
-	@include typogram($h2);
-	font-weight: normal;
+  @include typogram($h2);
+  font-weight: normal;
 }
 
 h3 {
@@ -64,12 +67,17 @@ h6 {
   @include typogram($h6);
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  a{
+  a {
     text-decoration: underline;
   }
 }
@@ -83,7 +91,13 @@ blockquote {
 }
 
 form {
-  legend, p, label, input, select, option, textarea {
+  legend,
+  p,
+  label,
+  input,
+  select,
+  option,
+  textarea {
     @include typogram($body);
   }
 }

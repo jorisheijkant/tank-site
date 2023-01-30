@@ -47,5 +47,6 @@ export default defineEventHandler(async () => {
 
   return {
     podcasts: podcasts,
+    latestPodcasts: podcasts.slice(0, 3),
   };
 });

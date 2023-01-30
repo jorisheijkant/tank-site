@@ -27,8 +27,6 @@
     <tank-footer />
   </div>
 </template>
-
 <script setup>
-const { data: podcasts } = await useFetch("api/podcasts", {key: "podcasts", initialCache: false});
+const { data: podcasts } = await useFetch("/api/podcasts");
 </script>
- 

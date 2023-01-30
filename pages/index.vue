@@ -6,16 +6,20 @@
 
     <!-- Latest podcasts block -->
 
-    <!-- <section class="section">
-            <h3>Latest podcasts</h3>
-            <div class="teaser-grid">
-                <small-teaser v-for="podcast in latestPodcasts" :item="podcast" :key="podcast.guid"/>
-            </div>
+    <section class="section" v-if="podcasts && podcasts.latestPodcasts && podcasts.latestPodcasts.length > 0">
+      <h3>Latest podcasts</h3>
+      <div class="teaser-grid">
+        <small-teaser
+          v-for="podcast in podcasts.latestPodcasts"
+          :item="podcast"
+          :key="podcast.guid"
+        />
+      </div>
 
-            <nuxt-link to="listen" class="tank-button">All podcasts</nuxt-link>
+      <nuxt-link to="listen" class="tank-button">All podcasts</nuxt-link>
 
-            <hr class="section-close">
-        </section> -->
+      <hr class="section-close" />
+    </section>
 
     <!-- Blog block -->
 
@@ -42,4 +46,5 @@
 
 <script setup>
 const { data: blogs } = await useFetch("/api/blogs");
+const { data: podcasts } = await useFetch("/api/podcasts");
 </script>

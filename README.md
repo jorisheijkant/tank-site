@@ -1,42 +1,15 @@
-# Nuxt 3 Minimal Starter
+# TANK site
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A simple showcase site for [TANK Kollektiv](https://tankkollektiv.com). Built with Nuxt 3. 
 
-## Setup
+## Development
+Simply install dependencies and tun `yarn dev` or `npm run dev` to start the development server. When developing, the site makes live requests to the Storyblok API where the content is hosted. 
 
-Make sure to install the dependencies:
+## Deployment
 
-```bash
-# yarn
-yarn install
+Nuxt 3 is a static site generator, which means it renders static html and does not make direct requests to the CMS content. This is good because it means the site is fast and not dependent on the CMS being up.
 
-# npm
-npm install
+It makes the deployment process a bit more complicated though. We use Github Actions to generate a new version of the site and rsync that to the server. This happens automatically when Storyblok content is being published through a Storyblok webhook. It can be run from this repo manually as well. 
 
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Code quality
+This project uses [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) to ensure code quality. Run `yarn format` every time before you commit to make sure the code adheres to our formatting. Use `yarn lint` to check for linting errors. However, this will show you a lot of errors that are due to Nuxt 3, which is still in its early stages and confuses the linter a bit.

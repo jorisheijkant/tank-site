@@ -27,6 +27,9 @@ let parsePodcasts = function (podcasts) {
               parsedPodcast.description = podcast.description[0];
             if (podcast["itunes:image"] && podcast["itunes:image"].length > -1)
               parsedPodcast.image = podcast["itunes:image"][0]["$"]["href"];
+              if(parsedPodcast.image) {
+                parsedPodcast.image = parsedPodcast.image.replace('t3000x3000', 't500x500');
+              }
 
             return parsedPodcast;
           });

@@ -6,7 +6,14 @@
 
     <!-- Latest podcasts block -->
 
-    <section class="section" v-if="podcasts && podcasts.latestPodcasts && podcasts.latestPodcasts.length > 0">
+    <section
+      class="section"
+      v-if="
+        podcasts &&
+        podcasts.latestPodcasts &&
+        podcasts.latestPodcasts.length > 0
+      "
+    >
       <h3>Latest podcasts</h3>
       <div class="teaser-grid">
         <small-teaser

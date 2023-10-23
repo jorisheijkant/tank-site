@@ -11,7 +11,7 @@
           {{ blog.story.content.intro }}
         </p>
         <time class="pub-time">{{
-          parseDate(blog.story.content.published_at)
+          parseDate(blog.story.published_at)
         }}</time>
 
         <img

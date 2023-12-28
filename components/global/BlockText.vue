@@ -7,10 +7,10 @@
     >
       <p class="paragraph-content" v-if="paragraph.content">
         <template
-          v-for="(item, i) in paragraph.content"
-          :key="`${data._uid}-p-${index}-{i}`"
+          v-for="(item, paragraphIndex) in paragraph.content"
+          :key="`${data._uid}-p-${index}-${paragraphIndex}`"
         >
-          <template v-if="!item.marks">{{ item.text }}</template>
+          <template v-if="!item.marks || (item.marks.length === 1 && item.marks.find((m) => m.type === 'textStyle'))">{{ item.text }}</template>
           <strong v-else-if="item.marks.find((m) => m.type === 'bold')">{{
             item.text
           }}</strong>

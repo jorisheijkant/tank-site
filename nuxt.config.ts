@@ -2,7 +2,7 @@
 let fetchedStories = fetch(`https://api.storyblok.com/v2/cdn/stories?token=I5Xclvhsp8PETrgkYZ1imAtt&starts_with=blogs&per_page=100`)
 
 const getRoutes = async () => {
-  let routes = ['/', '/404.html', '/200.html']
+  let routes = ['/', '/404.html', '/200.html', 'api/blogs', 'api/podcasts']
   let res = await fetchedStories
   let data = await res.json()
 
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
         return
     }
   },
-  
+
   experimental: {
     payloadExtraction: false,
   },

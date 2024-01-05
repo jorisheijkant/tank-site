@@ -12,6 +12,21 @@ export default defineNuxtConfig({
 
   css: ["~/styles/style.scss"],
 
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ["/", "/404.html", "/200.html"],
+    },
+  },
+
+  experimental: {
+    payloadExtraction: false,
+  },
+
+  routeRules: {
+    "/api/*": { headers: { "Content-Type": "application/json" } },
+  },
+
   modules: ["@nuxt/image"],
 
   app: {

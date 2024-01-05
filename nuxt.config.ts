@@ -2,12 +2,15 @@
 let fetchedStories = fetch(`https://api.storyblok.com/v2/cdn/stories?token=I5Xclvhsp8PETrgkYZ1imAtt&starts_with=blogs&per_page=100`)
 
 const getRoutes = async () => {
-  let routes = ['/', '/404.html', '/200.html', 'api/blogs', 'api/podcasts', 'api/insta']
+  let routes = ['/', '/404.html', '/200.html']
   let res = await fetchedStories
   let data = await res.json()
 
   for (const post of data.stories) {
     routes.push(`/${post.full_slug}`)
+
+    // Also push an API route for each blog post
+    // routes.push(`api/blog/${post.slug}`)
   }
 
   return routes

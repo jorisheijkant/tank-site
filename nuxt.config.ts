@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   css: ["~/styles/style.scss"],
 
-  modules: ["@nuxt/image-edge"],
+  modules: ["@nuxt/image"],
 
   app: {
     head: {

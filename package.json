@@ -10,10 +10,10 @@
     "lint": "yarn eslint --ext .js,.ts,.vue ."
   },
   "devDependencies": {
-    "@nuxt/image-edge": "^1.0.0-27913696.5d122a3",
+    "@nuxt/image": "^1.1.0",
     "eslint": "^8.32.0",
     "eslint-plugin-vue": "^9.9.0",
-    "nuxt": "^3.1.0",
+    "nuxt": "3.9.0",
     "prettier": "^2.8.3",
     "sass": "^1.57.1"
   },

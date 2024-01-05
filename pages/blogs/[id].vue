@@ -1,5 +1,5 @@
 <template>
-  <div class="main blog">
+  <div class="main blog" v-if="blog">
     <tank-nav />
 
     <article class="article" v-if="blog.story && blog.story.content">

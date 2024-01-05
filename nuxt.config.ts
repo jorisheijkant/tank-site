@@ -1,7 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig({
-  ssr: false,
-  
+export default defineNuxtConfig({  
   runtimeConfig: {
     storyblokToken: "I5Xclvhsp8PETrgkYZ1imAtt", // This is a public token
     public: {

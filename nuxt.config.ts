@@ -1,22 +1,6 @@
-// Get the routes from Storyblok here so we can generate them statically
-let fetchedStories = fetch(`https://api.storyblok.com/v2/cdn/stories?token=I5Xclvhsp8PETrgkYZ1imAtt&starts_with=blogs&per_page=100`)
-
-const getRoutes = async () => {
-  let routes = ['/', '/404.html', '/200.html']
-  let res = await fetchedStories
-  let data = await res.json()
-
-  for (const post of data.stories) {
-    routes.push(`/${post.full_slug}`)
-
-    // Also push an API route for each blog post
-    // routes.push(`api/blog/${post.slug}`)
-  }
-
-  return routes
-}
-
 export default defineNuxtConfig({  
+  ssr: true,
+  
   runtimeConfig: {
     storyblokToken: "I5Xclvhsp8PETrgkYZ1imAtt", // This is a public token
     public: {
@@ -34,16 +18,6 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ["/", "/404.html", "/200.html"],
     },
-  },
-
-  hooks: {
-    async 'nitro:config'(nitroConfig) {
-        if (nitroConfig.dev) { return }
-        let slugs = await getRoutes();
-        //@ts-ignore
-        nitroConfig.prerender.routes.push(...slugs)
-        return
-    }
   },
 
   experimental: {

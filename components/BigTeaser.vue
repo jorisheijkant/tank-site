@@ -3,6 +3,7 @@
     <div class="teaser-wrapper">
       <nuxt-img
         class="teaser-image"
+        loading="lazy"
         v-if="item.content && item.content.image && item.content.image.filename"
         :src="item.content.image.filename"
         alt=""

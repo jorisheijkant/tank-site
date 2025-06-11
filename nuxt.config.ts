@@ -14,6 +14,8 @@ export default defineNuxtConfig({
   css: ["~/styles/style.scss"],
 
   nitro: {
+    compatibilityDate: "2025-06-11",
+    preset: "netlify",
     prerender: {
       crawlLinks: true,
       routes: ["/", "/404.html", "/200.html"],
@@ -28,7 +30,7 @@ export default defineNuxtConfig({
     "/api/*": { headers: { "Content-Type": "application/json" } },
   },
 
-  modules: ["@nuxt/image"],
+  modules: ["@nuxt/image", "@nuxt/eslint"],
 
   app: {
     head: {

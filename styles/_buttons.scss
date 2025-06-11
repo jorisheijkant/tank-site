@@ -9,8 +9,11 @@ button:focus {
   border: 1px solid $black;
   padding: 0 10px;
   @include typogram($body);
-  color: $black;
   cursor: pointer;
+
+  & {
+    color: $black;
+  }
 
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
@@ -22,5 +25,8 @@ button:focus {
 .tank-button:hover {
   background: $black;
   border: 1px solid $white;
-  color: $white;
+
+  & {
+    color: $white;
+  }
 }

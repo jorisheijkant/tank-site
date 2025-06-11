@@ -1,6 +1,6 @@
-export default defineNuxtConfig({  
+export default defineNuxtConfig({
   ssr: true,
-  
+
   runtimeConfig: {
     storyblokToken: "I5Xclvhsp8PETrgkYZ1imAtt", // This is a public token
     public: {
@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   css: ["~/styles/style.scss"],
 
   nitro: {
+    preset: "netlify-static",
     prerender: {
       crawlLinks: true,
       routes: ["/", "/404.html", "/200.html"],

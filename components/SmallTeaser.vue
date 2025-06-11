@@ -1,7 +1,7 @@
 <template>
   <a class="teaser small-teaser" :href="item.link" target="_blank">
     <div class="teaser-wrapper">
-      <nuxt-img
+      <img
         class="teaser-image"
         loading="lazy"
         v-if="item && item.image"

@@ -1,7 +1,7 @@
 <template>
   <nuxt-link :to="`blogs/${item.slug}`" class="teaser big-teaser">
     <div class="teaser-wrapper">
-      <nuxt-img
+      <img
         class="teaser-image"
         loading="lazy"
         v-if="item.content && item.content.image && item.content.image.filename"

@@ -18,7 +18,7 @@
             :href="post.content.url.url"
             target="_blank"
           >
-            <nuxt-img
+            <img
               class="teaser-image"
               :src="`https://${parseUrl(post.content.image)}`"
               loading="lazy"
